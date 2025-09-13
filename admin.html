@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CivicConnect - Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="admin.css"> <!-- Linked CSS -->
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="admin-logo">
+                <i class="fas fa-city"></i>
+                <span>CivicConnect</span>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-list-alt"></i> All Reports</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> Messages</a></li>
+                <li><a href="#"><i class="fas fa-chart-bar"></i> Analytics</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+            
+            <div class="sidebar-footer">
+                <div class="admin-profile">
+                    <div class="admin-avatar">AD</div>
+                    <div class="admin-info">
+                        <h4>Admin User</h4>
+                        <p>Administrator</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="admin-main">
+            <div class="admin-header">
+                <h1 class="page-title">Reports Dashboard</h1>
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search reports...">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-title">Total Reports</div>
+                        <div class="stat-icon icon-blue">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">142</div>
+                    <div class="stat-change change-up">
+                        <i class="fas fa-arrow-up"></i> 12% from last week
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-title">Pending</div>
+                        <div class="stat-icon icon-orange">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">38</div>
+                    <div class="stat-change change-down">
+                        <i class="fas fa-arrow-down"></i> 5% from last week
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-title">In Progress</div>
+                        <div class="stat-icon icon-blue">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">24</div>
+                    <div class="stat-change change-up">
+                        <i class="fas fa-arrow-up"></i> 8% from last week
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div class="stat-title">Resolved</div>
+                        <div class="stat-icon icon-green">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <div class="stat-value">80</div>
+                    <div class="stat-change change-up">
+                        <i class="fas fa-arrow-up"></i> 15% from last week
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <div class="filter-group">
+                    <span class="filter-label">Department:</span>
+                    <select class="filter-select">
+                        <option>All Departments</option>
+                        <option>Public Works</option>
+                        <option>Sanitation</option>
+                        <option>Transportation</option>
+                        <option>Parks & Recreation</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <span class="filter-label">Status:</span>
+                    <select class="filter-select">
+                        <option>All Statuses</option>
+                        <option>Pending</option>
+                        <option>Acknowledged</option>
+                        <option>Working</option>
+                        <option>Resolved</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <span class="filter-label">Priority:</span>
+                    <select class="filter-select">
+                        <option>All Priorities</option>
+                        <option>High</option>
+                        <option>Medium</option>
+                        <option>Low</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <span class="filter-label">Sort by:</span>
+                    <select class="filter-select">
+                        <option>Most Votes</option>
+                        <option>Newest</option>
+                        <option>Oldest</option>
+                        <option>Department</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Reports Table -->
+            <div class="reports-table-container">
+                <table class="reports-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Votes</th>
+                            <th>Department</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="high-priority">
+                            <td class="report-id">#RC-4872</td>
+                            <td><span class="report-category category-pothole">Pothole</span></td>
+                            <td>Large pothole on Main St near Central Ave causing traffic issues</td>
+                            <td class="vote-count high-votes"><i class="fas fa-heart"></i> 64</td>
+                            <td>Public Works</td>
+                            <td><span class="status-badge status-working">Working</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="action-btn btn-resolve"><i class="fas fa-check"></i> Resolve</button>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr class="high-priority">
+                            <td class="report-id">#RC-5216</td>
+                            <td><span class="report-category category-streetlight">Streetlight</span></td>
+                            <td>Streetlight out on Oak Street, making area unsafe at night</td>
+                            <td class="vote-count high-votes"><i class="fas fa-heart"></i> 52</td>
+                            <td>Public Works</td>
+                            <td><span class="status-badge status-pending">Pending</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="action-btn btn-acknowledge"><i class="fas fa-check-double"></i> Ack</button>
+                                    <button class="action-btn btn-working"><i class="fas fa-tools"></i> Work</button>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="report-id">#RC-4987</td>
+                            <td><span class="report-category category-trash">Trash</span></td>
+                            <td>Overflowing trash bins at City Park attracting pests</td>
+                            <td class="vote-count"><i class="fas fa-heart"></i> 37</td>
+                            <td>Sanitation</td>
+                            <td><span class="status-badge status-acknowledged">Acknowledged</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="action-btn btn-working"><i class="fas fa-tools"></i> Work</button>
+                                    <button class="action-btn btn-resolve"><i class="fas fa-check"></i> Resolve</button>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="report-id">#RC-5102</td>
+                            <td><span class="report-category category-graffiti">Graffiti</span></td>
+                            <td>Graffiti on historical building downtown</td>
+                            <td class="vote-count"><i class="fas fa-heart"></i> 28</td>
+                            <td>Parks & Recreation</td>
+                            <td><span class="status-badge status-resolved">Resolved</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="action-btn btn-acknowledge"><i class="fas fa-check-double"></i> Ack</button>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="report-id">#RC-5331</td>
+                            <td><span class="report-category category-pothole">Pothole</span></td>
+                            <td>Small pothole developing on Maple Ave</td>
+                            <td class="vote-count"><i class="fas fa-heart"></i> 15</td>
+                            <td>Public Works</td>
+                            <td><span class="status-badge status-pending">Pending</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="action-btn btn-acknowledge"><i class="fas fa-check-double"></i> Ack</button>
+                                    <button class="action-btn btn-working"><i class="fas fa-tools"></i> Work</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Messages Section -->
+            <div class="messages-section">
+                <div class="messages-header">
+                    <h2 class="section-title">Recent Messages</h2>
+                    <button class="action-btn btn-acknowledge">View All</button>
+                </div>
+                
+                <div class="messages-grid">
+                    <div class="message-card">
+                        <div class="message-header">
+                            <div class="message-sender">John Doe</div>
+                            <div class="message-date">Today, 10:24 AM</div>
+                        </div>
+                        <div class="message-subject">Update on pothole repair</div>
+                        <div class="message-content">Hello, any update on when the pothole on Main Street will be repaired? It's getting worse with the recent rain.</div>
+                        <div class="message-actions">
+                            <button class="message-btn btn-reply"><i class="fas fa-reply"></i> Reply</button>
+                            <button class="message-btn btn-archive"><i class="fas fa-archive"></i> Archive</button>
+                        </div>
+                    </div>
+                    
+                    <div class="message-card">
+                        <div class="message-header">
+                            <div class="message-sender">Sarah Johnson</div>
+                            <div class="message-date">Yesterday, 3:45 PM</div>
+                        </div>
+                        <div class="message-subject">Thank you for fixing the streetlight</div>
+                        <div class="message-content">Just wanted to say thank you for fixing the streetlight on Oak Street so quickly. The neighborhood feels much safer now.</div>
+                        <div class="message-actions">
+                            <button class="message-btn btn-reply"><i class="fas fa-reply"></i> Reply</button>
+                            <button class="message-btn btn-archive"><i class="fas fa-archive"></i> Archive</button>
+                        </div>
+                    </div>
+                    
+                    <div class="message-card">
+                        <div class="message-header">
+                            <div class="message-sender">Robert Chen</div>
+                            <div class="message-date">Oct 12, 2023</div>
+                        </div>
+                        <div class="message-subject">New issue in Riverside Park</div>
+                        <div class="message-content">There's a broken bench and some damaged playground equipment in Riverside Park that needs attention.</div>
+                        <div class="message-actions">
+                            <button class="message-btn btn-reply"><i class="fas fa-reply"></i> Reply</button>
+                            <button class="message-btn btn-archive"><i class="fas fa-archive"></i> Archive</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="admin.js"></script> <!-- Linked JS -->
+</body>
+</html>
